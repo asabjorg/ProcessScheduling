@@ -1,5 +1,8 @@
 package com.ru.usty.scheduling;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 import com.ru.usty.scheduling.process.ProcessExecution;
 
 public class Scheduler {
@@ -7,6 +10,9 @@ public class Scheduler {
 	ProcessExecution processExecution;
 	Policy policy;
 	int quantum;
+	
+	Queue<Integer> processQueue;
+	
 
 	/**
 	 * Add any objects and variables here (if needed)
@@ -31,7 +37,12 @@ public class Scheduler {
 
 		this.policy = policy;
 		this.quantum = quantum;
-
+		
+		processQueue = new LinkedList<Integer>();
+		
+		processQueue.add(new Integer(5));
+		int i = processQueue.remove();
+		processQueue.
 		/**
 		 * Add general initialization code here (if needed)
 		 */
